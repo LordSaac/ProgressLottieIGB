@@ -17,6 +17,18 @@ Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
 |<img  height="568" width="320" src="https://github.com/LordSaac/ProgressLottieIGB/blob/master/Media/Screenshot_2018-12-31-18-10-48.png">|<img  height="568" width="320" src="https://github.com/LordSaac/ProgressLottieIGB/blob/master/Media/Screenshot_2018-12-31-18-11-00.png">|
 </p>
 
+## Important Info:  
+#### To create a raw folder:
+
+- Right-click the res folder.
+- Choose New.
+- Choose Android Resource Directory.
+- Name the directory raw.
+- In the Resource Types Section add raw.
+- Click ok.
+- **Copy your JSON lottie in RAW folder**
+
+
 ## Kotlin Code
 
 #### Code:  
