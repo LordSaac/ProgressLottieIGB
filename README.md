@@ -1,4 +1,4 @@
-# Form Simple IGB (Beta)
+# Progress Lottie IGB
 
 ### Dependency
 
