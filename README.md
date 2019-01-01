@@ -4,7 +4,7 @@
 
 dependencies {
 <br>
-` implementation 'com.jgb.lordsaac.igb.formsimpleigb:progresslottieigb:1.0'`
+` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:0.0.1'`
  <br>
 }
 
