@@ -4,7 +4,7 @@
 
 dependencies {
 <br>
-` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:0.0.1'`
+` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:0.0.2'`
  <br>
 }
 
@@ -68,7 +68,7 @@ finishLoadingIGB()
 
 ####  Code:
 ```
-ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 2019...",0);
+ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 2019...",0,200,200);
 ```
 
 #### Remove progress:  
