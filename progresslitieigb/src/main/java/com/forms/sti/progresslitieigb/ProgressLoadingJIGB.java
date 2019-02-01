@@ -5,7 +5,7 @@ import com.forms.sti.progresslitieigb.Model.Setting;
 
 public class ProgressLoadingJIGB {
 
-    public static void startLoadingJIGB(Context context, int srcLottie, String message, int timer){
+    public static void startLoadingJIGB(Context context, int srcLottie, String message, int timer, int width, int  higth){
 
         ManagerLoadingIGB managerLoadingIGB = new ManagerLoadingIGB();
         Setting setting = new Setting();
@@ -13,6 +13,11 @@ public class ProgressLoadingJIGB {
         setting.setSrcLottieJson(srcLottie);
         setting.setMessage(message);
         setting.setTimer(timer);
+
+        if(width > 0)
+            setting.setWidth(width);
+        if(higth > 0)
+            setting.setHight(width);
 
         managerLoadingIGB.beginLoading(setting,context);
     }

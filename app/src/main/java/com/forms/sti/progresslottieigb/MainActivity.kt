@@ -24,15 +24,15 @@ class MainActivity : AppCompatActivity() {
             message = "Good Morning!" //  Center Message
             srcLottieJson = R.raw.loading_a // Tour Source JSON Lottie
             timer = 10000                   // Time of live for progress.
-
-
+            hight = 500 // Optional
+            width = 500 // Optional
 
         }
     }
 
     fun clickOption2(view: View){
 
-        starLoadingSimpleIGB(R.raw.pork_dance)
+        starLoadingSimpleIGB(R.raw.funny)
 
         Handler().postDelayed({
             finishLoadingIGB()

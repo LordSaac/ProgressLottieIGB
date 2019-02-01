@@ -7,6 +7,8 @@ import android.speech.tts.TextToSpeech
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import com.airbnb.lottie.LottieAnimationView
 import com.forms.sti.progresslitieigb.Model.Setting
@@ -26,9 +28,10 @@ class ManagerLoadingIGB{
 
         val lotieView = dialogView.findViewById(R.id.lotie) as LottieAnimationView
         val text = dialogView.findViewById(R.id.tv_loading) as TextView
+        val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(setting.hight,setting.width)
 
         lotieView.setAnimation(setting.srcLottieJson)
-
+        lotieView.layoutParams = params
         dialogAlert = dialogBuilder.create()
 
         ProgressLoadingIGB.alert = dialogAlert

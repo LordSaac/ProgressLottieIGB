@@ -6,7 +6,6 @@ apply plugin: 'maven-publish'
 apply plugin: 'idea'
 apply plugin: "com.jfrog.artifactory"
 
-
 buildscript {
     repositories {
         jcenter()
@@ -26,13 +25,13 @@ allprojects {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 26
         versionCode 1
-        versionName "0.0.1"
+        versionName "0.0.2"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -48,9 +47,9 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -82,12 +81,13 @@ tasks.withType(Javadoc).all {
 artifacts {
     archives javadocJar
     archives sourcesJar
+
 }
 
 
 bintray {
-    user = ''//System enviroment variable
-    key = ''
+    user = 'linkinzel1'//System enviroment variable
+    key = 'f326dbc498bf21ae6efb63278e8f112569ce1963'
     logger.log(LogLevel.ERROR, "user:" + user + " key:" + key)
     publications = ['MyPublication']
     //configurations = ['archives']

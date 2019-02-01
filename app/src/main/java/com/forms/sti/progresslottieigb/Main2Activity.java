@@ -25,7 +25,7 @@ public class Main2Activity extends AppCompatActivity {
     public void clickOption(View v){
 
 
-        ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 2019...",0);
+        ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 2019...",0,200,200);
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
