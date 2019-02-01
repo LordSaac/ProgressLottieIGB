@@ -33,10 +33,13 @@ Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
 
 #### Code:  
 ```
-        ProgressLoadingIGB.startLoadingIGB(this){
-            message = "Good Morning!"      //  Center Message .  #OPTIONAL
-            srcLottieJson = R.raw.loading_a // Your Source JSON Lottie 
-            timer = 10000                   // Time of live for progress. #OPTIONAL
+    ProgressLoadingIGB.startLoadingIGB(this){
+            message = "Good Morning!" //  Center Message
+            srcLottieJson = R.raw.loading_a // Tour Source JSON Lottie
+            timer = 10000                   // Time of live for progress.
+            hight = 500 // Optional
+            width = 500 // Optional
+
         }
 ```
 #### Simple Method:  
@@ -75,7 +78,7 @@ ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 20
 
 #### Example:  
 ```
-    ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 2019...",0);
+    ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 2019...",0,200,200);
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
