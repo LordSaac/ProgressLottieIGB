@@ -93,7 +93,7 @@ ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 20
 Here: https://www.lottiefiles.com/
 
 <br>
-<h2>Released December 28, 2018</h2>
+<h2>Released February 1, 2019</h2>
 
 ## Licence
 
