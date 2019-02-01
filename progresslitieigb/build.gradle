@@ -86,8 +86,8 @@ artifacts {
 
 
 bintray {
-    user = 'linkinzel1'//System enviroment variable
-    key = 'f326dbc498bf21ae6efb63278e8f112569ce1963'
+    user = ''//System enviroment variable
+    key = ''
     logger.log(LogLevel.ERROR, "user:" + user + " key:" + key)
     publications = ['MyPublication']
     //configurations = ['archives']
