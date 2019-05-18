@@ -2,12 +2,6 @@
 
 ### Dependency
 
-dependencies {
-<br>
-` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:0.0.2'`
- <br>
-}
-
 Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
 
 <p align="center">
@@ -88,9 +82,25 @@ ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 20
             }
         }, 6000);
 ```
+
 ### For More Animations:
 
 Here: https://www.lottiefiles.com/
+
+### Dependency:
+
+dependencies {
+<br>
+` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:0.0.2'`
+ <br>
+}
+<br>
+:coffee: Oh, amazing, I buy you a coffee:  https://paypal.me/LordSaac?locale.x=es_XC
+<br>
+:star:	  Or you could give a star
+<br>
+:raised_hands: Thanks! 
+
 
 <br>
 <h2>Released February 1, 2019</h2>
