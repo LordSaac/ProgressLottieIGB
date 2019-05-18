@@ -94,9 +94,10 @@ dependencies {
  <br>
 }
 <br>
-:coffee: Oh, amazing, I buy you a coffee:  https://paypal.me/LordSaac?locale.x=es_XC
 <br>
-:star:	  Or you could give a star
+:coffee: Oh, amazing, I buy you a coffee [Here](https://paypal.me/LordSaac?locale.x=es_XC)
+<br>
+:star: Or you could give a star [Here](https://github.com/LordSaac/ProgressLottieIGB)
 <br>
 :raised_hands: Thanks! 
 
