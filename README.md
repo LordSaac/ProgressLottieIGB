@@ -1,6 +1,5 @@
 # Progress Lottie IGB
 
-### Dependency
 
 Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
 
