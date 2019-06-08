@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.airbnb.lottie.LottieAnimationView
+import com.forms.sti.progresslitieigb.Model.JSetting
 import com.forms.sti.progresslitieigb.Model.Setting
 
 
@@ -18,6 +19,42 @@ class ManagerLoadingIGB{
 
     @SuppressLint("WrongViewCast")
     fun beginLoading(setting: Setting, context: Context){
+
+        val dialogAlert: AlertDialog
+        val dialogBuilder = AlertDialog.Builder(context, R.style.DialogTheme)
+        dialogBuilder.setCancelable(false)
+        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val dialogView = inflater.inflate(R.layout.dialog_progress, null)
+        dialogBuilder.setView(dialogView)
+
+        val lotieView = dialogView.findViewById(R.id.lotie) as LottieAnimationView
+        val text = dialogView.findViewById(R.id.tv_loading) as TextView
+        val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(setting.hight,setting.width)
+
+        lotieView.setAnimation(setting.srcLottieJson)
+        lotieView.layoutParams = params
+        dialogAlert = dialogBuilder.create()
+
+        ProgressLoadingIGB.alert = dialogAlert
+
+        ProgressLoadingIGB.alert.show()
+
+        ProgressLoadingIGB.isShowing = true
+
+        if(setting.timer > 0)
+            Handler().postDelayed({
+                ProgressLoadingIGB.alert.dismiss()
+                ProgressLoadingIGB.isShowing = false
+            }, setting.timer.toLong())
+
+        if(setting.message.isNotEmpty()){
+            text.visibility = View.VISIBLE
+            text.text = setting.message
+        }
+    }
+
+    @SuppressLint("WrongViewCast")
+    fun beginJLoading(setting: JSetting, context: Context){
 
         val dialogAlert: AlertDialog
         val dialogBuilder = AlertDialog.Builder(context, R.style.DialogTheme)

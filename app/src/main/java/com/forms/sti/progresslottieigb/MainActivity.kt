@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         ProgressLoadingIGB.startLoadingIGB(this){
             message = "Good Morning!" //  Center Message
-            srcLottieJson = R.raw.loading_a // Tour Source JSON Lottie
+            srcLottieJson = R.raw.loader // Tour Source JSON Lottie
             timer = 10000                   // Time of live for progress.
             hight = 500 // Optional
             width = 500 // Optional

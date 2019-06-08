@@ -1,2 +1,15 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.forms.sti.progresslitieigb"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+          package="com.forms.sti.progresslitieigb">
+
+    <application
+            android:allowBackup="true"
+            android:label="@string/app_name"
+            tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+            tools:replace="android:appComponentFactory"
+            android:appComponentFactory="whateverString"
+            android:supportsRtl="true">
+
+
+    </application>
+
+</manifest>

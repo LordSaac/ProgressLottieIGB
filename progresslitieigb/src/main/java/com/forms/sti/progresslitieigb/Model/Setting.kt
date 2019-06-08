@@ -1,9 +1,5 @@
 package com.forms.sti.progresslitieigb.Model
-
-import android.app.ActionBar
-import android.text.Layout
 import android.widget.LinearLayout
-
 
 // Defult Setting
 
