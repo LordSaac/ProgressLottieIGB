@@ -58,10 +58,16 @@ finishLoadingIGB()
         }, 1500)
 ```
 ## Java Code
-
+It is recommended to use Java 8 onwards.
 ####  Code:
 ```
-ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 2019...",0,200,200);
+        ProgressLoadingJIGB.setupLoading = (setup) ->  {
+            setup.srcLottieJson = R.raw.sun; // Tour Source JSON Lottie
+            setup.message = "Welcome Summer!";//  Center Message
+            setup.timer = 0;   // Time of live for progress.
+            setup.width = 200; // Optional
+            setup.hight = 200; // Optional
+        };
 ```
 
 #### Remove progress:  
@@ -71,7 +77,13 @@ ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 20
 
 #### Example:  
 ```
-    ProgressLoadingJIGB.startLoadingJIGB(context,R.raw.pork_dance,"Happy New Year 2019...",0,200,200);
+           ProgressLoadingJIGB.setupLoading = (setup) ->  {
+            setup.srcLottieJson = R.raw.sun; // Tour Source JSON Lottie
+            setup.message = "Welcome Summer!";//  Center Message
+            setup.timer = 0;   // Time of live for progress.
+            setup.width = 200; // Optional
+            setup.hight = 200; // Optional
+        };
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -90,7 +102,7 @@ Here: https://www.lottiefiles.com/
 
 dependencies {
 <br>
-` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:0.0.2'`
+` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:0.0.3'`
  <br>
 }
 <br>
@@ -103,11 +115,11 @@ dependencies {
 
 
 <br>
-<h2>Released February 1, 2019</h2>
+<h2>Released June 10, 2019</h2>
 
 ## Licence
 
-Copyright 2018 Isaac G. Banda
+Copyright 2019 Isaac G. Banda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
