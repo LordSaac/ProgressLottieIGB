@@ -38,5 +38,5 @@
             app:layout_constraintEnd_toEndOf="parent" android:onClick="clickActivity"
             android:textColor="@color/transparent_white" android:background="@color/colorPrimary"
             tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toTopOf="@+id/button2"/>
+            app:layout_constraintBottom_toTopOf="@+id/close"/>
 </android.support.constraint.ConstraintLayout>
