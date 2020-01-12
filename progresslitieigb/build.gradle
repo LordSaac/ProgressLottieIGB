@@ -4,22 +4,22 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'maven-publish'
 apply plugin: 'idea'
-apply plugin: "com.jfrog.artifactory"
+
 
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.8.1"
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.+'
+
     }
 }
 
 
 allprojects {
     tasks.withType(Javadoc) {
-        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('Xdoclint:nosne', '-quiet')
         options.addStringOption('encoding', 'UTF-8')
     }
 }
@@ -31,7 +31,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
-        versionName "0.0.2"
+        versionName "0.0.4"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

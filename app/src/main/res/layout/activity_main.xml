@@ -37,6 +37,6 @@
             android:id="@+id/button4" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:onClick="clickActivity"
             android:textColor="@color/transparent_white" android:background="@color/colorPrimary"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintBottom_toTopOf="@+id/close"/>
+            tools:ignore="MissingConstraints,UnknownIdInLayout"
+            />
 </android.support.constraint.ConstraintLayout>
