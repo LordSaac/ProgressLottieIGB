@@ -1,4 +1,4 @@
-# Progress Lottie IGB
+<h1  align="center"> Progress Lottie IGB </h1>
 
 
 Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
@@ -32,9 +32,50 @@ Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
             timer = 10000                   // Time of live for progress.
             hight = 500 // Optional
             width = 500 // Optional
-
+            
         }
+
 ```
+
+## Use cancel button:  
+
+#### Add **IProgressLoadingActions** in your class
+#### Example:  
+```
+class MainActivity : AppCompatActivity(), IProgressLoadingActions {
+      
+      
+      fun click(view: View){
+
+        ProgressLoadingIGB.startLoadingIGB(this){
+            message = "Good Morning!" //  Center Message
+            srcLottieJson = R.raw.loader // Tour Source JSON Lottie
+            timer = 10000                   // Time of live for progress.
+            hight = 500 // Optional
+            width = 500 // Optional
+            cancelButton = true // Optional added cancel button
+            cancelButtonAlpha = 0.6f  // Optional
+            cancelButtonHight = 75  // Optional
+            cancelButtonWidth = 60 // Optional
+            cancelButtonColor = R.color.colorPrimary  // Optional
+           // cancelButtonBackground = R.drawable.ic_launcher_background //OPTIONAL recomendable use vector xml
+         }
+      }
+        
+      override fun CancelButton() {
+        val builder =
+            AlertDialog.Builder(this)
+        builder.setTitle("Cancel")
+        builder.setMessage("Here close any process")
+
+        builder.setPositiveButton("OK", null)
+
+        val dialog = builder.create()
+        dialog.show()
+    }
+}
+```
+
 #### Simple Method:  
 
 ```
@@ -70,6 +111,50 @@ It is recommended to use Java 8 onwards.
         };
 ```
 
+## Use cancel button:  
+
+#### Add **IProgressLoadingActions** in your class
+#### Example:  
+```
+public class Main2Activity extends AppCompatActivity implements IProgressLoadingActions {
+      
+      
+      public void clickOption(View v){
+
+          ProgressLoadingJIGB.setupLoading = (setup) ->  {
+            setup.srcLottieJson = R.raw.sun; // Tour Source JSON Lottie
+            setup.message = "Welcome Summer!";//  Center Message
+            setup.timer = 0;   // Time of live for progress.
+            setup.width = 200; // Optional
+            setup.hight = 200; // Optional
+            setup.cancelButton = true; // Optional
+            setup.cancelButtonAlpha = 1f; // Optional
+            setup.cancelButtonHight = 50; // Optional
+            setup.cancelButtonWidth = 45; // Optional
+           // setup.cancelButtonBackground = R.drawable.ic_launcher_background; //OPTIONAL recomendable use vector xml
+
+        };
+
+
+      }
+        
+    @Override
+    public void CancelButton() {
+        // setup the alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Cancel");
+        builder.setMessage("Here close any process");
+
+        // add a button
+        builder.setPositiveButton("OK", null);
+
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+}
+```
+
 #### Remove progress:  
 ```
   ProgressLoadingJIGB.finishLoadingJIGB(context);
@@ -102,7 +187,7 @@ Here: https://www.lottiefiles.com/
 
 dependencies {
 <br>
-` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:0.0.3'`
+` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:1.0.0'`
  <br>
 }
 <br>
@@ -115,11 +200,11 @@ dependencies {
 
 
 <br>
-<h2>Released June 10, 2019</h2>
+<h2>Released June 10, 2020</h2>
 
 ## Licence
 
-Copyright 2019 Isaac G. Banda
+Copyright 2020 Isaac G. Banda
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
