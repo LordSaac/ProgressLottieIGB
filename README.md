@@ -200,7 +200,7 @@ dependencies {
 
 
 <br>
-<h2>Released June 10, 2020</h2>
+<h2>Released January 13, 2020</h2>
 
 ## Licence
 
