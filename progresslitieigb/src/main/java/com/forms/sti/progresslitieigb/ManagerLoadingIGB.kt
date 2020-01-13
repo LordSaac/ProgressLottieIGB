@@ -3,14 +3,18 @@ package com.forms.sti.progresslitieigb
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Handler
-import android.speech.tts.TextToSpeech
+import android.support.constraint.ConstraintLayout
+import android.support.graphics.drawable.VectorDrawableCompat
+import android.support.v4.content.ContextCompat
+import android.support.v4.graphics.drawable.DrawableCompat
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.TextView
 import com.airbnb.lottie.LottieAnimationView
+import com.forms.sti.progresslitieigb.Inteface.IProgressLoadingActions
 import com.forms.sti.progresslitieigb.Model.JSetting
 import com.forms.sti.progresslitieigb.Model.Setting
 
@@ -30,6 +34,10 @@ class ManagerLoadingIGB{
         val lotieView = dialogView.findViewById(R.id.lotie) as LottieAnimationView
         val text = dialogView.findViewById(R.id.tv_loading) as TextView
         val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(setting.hight,setting.width)
+        val paramsButton: ConstraintLayout.LayoutParams = ConstraintLayout.LayoutParams(setting.cancelButtonWidth,setting.cancelButtonHight)
+        val close = dialogView.findViewById(R.id.close) as Button
+        val contentButton = dialogView.findViewById(R.id.cl_button) as ConstraintLayout
+
 
         lotieView.setAnimation(setting.srcLottieJson)
         lotieView.layoutParams = params
@@ -51,6 +59,22 @@ class ManagerLoadingIGB{
             text.visibility = View.VISIBLE
             text.text = setting.message
         }
+
+        if(setting.cancelButton){
+            close.setBackgroundResource(setting.cancelButtonBackground)
+            DrawableCompat.setTint(close.background, ContextCompat.getColor(context, setting.cancelButtonColor))
+            close.layoutParams = paramsButton
+            close.alpha = setting.cancelButtonAlpha
+            contentButton.visibility = View.VISIBLE
+        }
+
+        close.setOnClickListener {
+            ProgressLoadingIGB.alert.dismiss()
+            ProgressLoadingIGB.isShowing = false
+
+            if (context is IProgressLoadingActions)
+                   context.CancelButton()
+        }
     }
 
     @SuppressLint("WrongViewCast")
@@ -66,6 +90,9 @@ class ManagerLoadingIGB{
         val lotieView = dialogView.findViewById(R.id.lotie) as LottieAnimationView
         val text = dialogView.findViewById(R.id.tv_loading) as TextView
         val params: LinearLayout.LayoutParams = LinearLayout.LayoutParams(setting.hight,setting.width)
+        val close = dialogView.findViewById(R.id.close) as Button
+        val contentButton = dialogView.findViewById(R.id.cl_button) as ConstraintLayout
+        val paramsButton: ConstraintLayout.LayoutParams = ConstraintLayout.LayoutParams(setting.cancelButtonWidth,setting.cancelButtonHight)
 
         lotieView.setAnimation(setting.srcLottieJson)
         lotieView.layoutParams = params
@@ -86,6 +113,23 @@ class ManagerLoadingIGB{
         if(setting.message.isNotEmpty()){
             text.visibility = View.VISIBLE
             text.text = setting.message
+        }
+
+        if(setting.cancelButton){
+            close.setBackgroundResource(setting.cancelButtonBackground)
+            DrawableCompat.setTint(close.background, ContextCompat.getColor(context, setting.cancelButtonColor))
+            close.layoutParams = paramsButton
+            close.alpha = setting.cancelButtonAlpha
+            contentButton.visibility = View.VISIBLE
+        }
+
+
+        close.setOnClickListener {
+            ProgressLoadingIGB.alert.dismiss()
+            ProgressLoadingIGB.isShowing = false
+
+            if (context is IProgressLoadingActions)
+                context.CancelButton()
         }
     }
 
