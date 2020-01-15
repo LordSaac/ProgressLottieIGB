@@ -21,8 +21,8 @@ Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
 - Click ok.
 - **Copy your JSON lottie in RAW folder**
 
-
-## Kotlin Code
+<hr>
+<h1 align="center">KOTLIN CODE </h1>
 
 #### Code:  
 ```
@@ -98,7 +98,9 @@ finishLoadingIGB()
             finishLoadingIGB()
         }, 1500)
 ```
-## Java Code
+<hr>
+<h1 align="center">JAVA CODE </h1>
+
 It is recommended to use Java 8 onwards.
 ####  Code:
 ```
