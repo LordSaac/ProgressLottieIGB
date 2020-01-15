@@ -38,8 +38,8 @@ Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
 ```
 
 ## Use cancel button:  
-
-#### Add **IProgressLoadingActions** in your class
+This method the user will active for cancel any process.
+#### Add this implement in your class: ```IProgressLoadingActions```
 #### Example:  
 ```
 class MainActivity : AppCompatActivity(), IProgressLoadingActions {
@@ -112,8 +112,8 @@ It is recommended to use Java 8 onwards.
 ```
 
 ## Use cancel button:  
-
-#### Add **IProgressLoadingActions** in your class
+This method the user will active for cancel any process.
+#### Add this implement in your class: ```IProgressLoadingActions```
 #### Example:  
 ```
 public class Main2Activity extends AppCompatActivity implements IProgressLoadingActions {
