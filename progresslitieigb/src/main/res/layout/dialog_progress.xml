@@ -43,7 +43,6 @@
                 android:id="@+id/close"
                 android:layout_width="35dp"
                 android:layout_height="45dp"
-                android:alpha="0.4"
                 android:background="@drawable/ic_times"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
