@@ -189,7 +189,7 @@ Here: https://www.lottiefiles.com/
 
 dependencies {
 <br>
-` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:1.0.0'`
+` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:1.0.1'`
  <br>
 }
 <br>
