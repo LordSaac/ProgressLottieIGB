@@ -1,6 +1,7 @@
 package com.forms.sti.progresslottieigb
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AlertDialog
@@ -24,17 +25,20 @@ class MainActivity : AppCompatActivity(), IProgressLoadingActions {
     fun click(view: View){
 
         ProgressLoadingIGB.startLoadingIGB(this){
-            message = "Good Morning!" //  Center Message
-            srcLottieJson = R.raw.loader // Tour Source JSON Lottie
-            timer = 10000                   // Time of live for progress.
-            hight = 500 // Optional
-            width = 500 // Optional
+            message = "Please Wait" //  Center Message
+            sizeTextMessage = 50.0f // Size text // Optional
+            fontTextMessage = R.raw.caveat_regular// Set your personal font // Optional
+            srcLottieJson = R.raw.loader // Your Source JSON Lottie
+            fontColorMessage = Color.GREEN
+            timer = 10000               // Time of live for progress.
+            hight = 700 // Optional
+            width = 700 // Optional
             cancelButton = true // Optional added cancel button
             cancelButtonAlpha = 0.6f  // Optional
             cancelButtonHight = 75  // Optional
             cancelButtonWidth = 60 // Optional
-            cancelButtonColor = R.color.colorPrimary  // Optional
-           // cancelButtonBackground = R.drawable.ic_launcher_background //OPTIONAL recomendable use vector xml
+            cancelButtonColor = R.color.colorAccent  // Optional
+           // cancelButtonBackground = R.drawable.ic_launcher_background //OPTIONAL recommendable use vector xml
 
         }
     }

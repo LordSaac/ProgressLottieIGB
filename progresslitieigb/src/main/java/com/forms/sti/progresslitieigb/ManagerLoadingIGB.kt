@@ -6,10 +6,12 @@ import android.os.Handler
 import android.support.constraint.ConstraintLayout
 import android.support.graphics.drawable.VectorDrawableCompat
 import android.support.v4.content.ContextCompat
+import android.support.v4.content.res.ResourcesCompat
 import android.support.v4.graphics.drawable.DrawableCompat
 import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -25,7 +27,7 @@ class ManagerLoadingIGB{
     fun beginLoading(setting: Setting, context: Context){
 
         val dialogAlert: AlertDialog
-        val dialogBuilder = AlertDialog.Builder(context, R.style.DialogTheme)
+        val dialogBuilder = AlertDialog.Builder(context, setting.styleDialog)
         dialogBuilder.setCancelable(false)
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val dialogView = inflater.inflate(R.layout.dialog_progress, null)
@@ -40,8 +42,18 @@ class ManagerLoadingIGB{
 
 
         lotieView.setAnimation(setting.srcLottieJson)
-        lotieView.layoutParams = params
+        lotieView.layoutParams = params as ViewGroup.LayoutParams?
         dialogAlert = dialogBuilder.create()
+
+        text.textSize = setting.sizeTextMessage
+
+
+        if(setting.fontTextMessage != 0) {
+            val typeface = ResourcesCompat.getFont(context, setting.fontTextMessage)
+            text.setTypeface(typeface)
+        }
+
+        text.setTextColor(setting.fontColorMessage)
 
         ProgressLoadingIGB.alert = dialogAlert
 
@@ -81,11 +93,11 @@ class ManagerLoadingIGB{
     fun beginJLoading(setting: JSetting, context: Context){
 
         val dialogAlert: AlertDialog
-        val dialogBuilder = AlertDialog.Builder(context, R.style.DialogTheme)
-        dialogBuilder.setCancelable(false)
+        val dialogBuilder = AlertDialog.Builder(context,setting.styleDialog)
+            dialogBuilder.setCancelable(false)
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val dialogView = inflater.inflate(R.layout.dialog_progress, null)
-        dialogBuilder.setView(dialogView)
+            dialogBuilder.setView(dialogView)
 
         val lotieView = dialogView.findViewById(R.id.lotie) as LottieAnimationView
         val text = dialogView.findViewById(R.id.tv_loading) as TextView
@@ -97,6 +109,16 @@ class ManagerLoadingIGB{
         lotieView.setAnimation(setting.srcLottieJson)
         lotieView.layoutParams = params
         dialogAlert = dialogBuilder.create()
+       // dialogAlert.window?.setBackgroundDrawableResource(android.R.color.holo_blue_dark)
+        text.textSize = setting.sizeTextMessage
+
+
+        if(setting.fontTextMessage != 0) {
+            val typeface = ResourcesCompat.getFont(context, setting.fontTextMessage)
+            text.setTypeface(typeface)
+        }
+
+        text.setTextColor(setting.fontColorMessage)
 
         ProgressLoadingIGB.alert = dialogAlert
 
@@ -151,6 +173,7 @@ fun Context.starLoadingSimpleIGB(srcLotieJson: Int) {
 
     val dialogAlert: AlertDialog
     val dialogBuilder = AlertDialog.Builder(this, R.style.DialogTheme)
+
     dialogBuilder.setCancelable(false)
     val inflater = this.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
     val dialogView = inflater.inflate(R.layout.dialog_progress, null)

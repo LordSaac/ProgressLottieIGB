@@ -38,14 +38,16 @@ public class Main2Activity extends AppCompatActivity implements IProgressLoading
          * @Note funtion lambda for java, Compile in Java 8 ...
          */
         ProgressLoadingJIGB.setupLoading = (setup) ->  {
-            setup.srcLottieJson = R.raw.sun; // Tour Source JSON Lottie
+            setup.srcLottieJson = R.raw.travel; // Your Source JSON Lottie
             setup.message = "Welcome Summer!";//  Center Message
+            setup.sizeTextMessage = 16.0f;// Size text // Optional
+            setup.styleDialog = R.style.DialogTheme; // Optional
             setup.timer = 0;   // Time of live for progress.
-            setup.width = 200; // Optional
-            setup.hight = 200; // Optional
+            setup.width = 500; // Optional
+            setup.hight = 500; // Optional
             setup.cancelButton = true; // Optional
             setup.cancelButtonAlpha = 1f; // Optional
-            setup.cancelButtonHight = 50; // Optional
+            setup.cancelButtonHight = 75; // Optional
             setup.cancelButtonWidth = 45; // Optional
            // setup.cancelButtonBackground = R.drawable.ic_launcher_background; //OPTIONAL recomendable use vector xml
 

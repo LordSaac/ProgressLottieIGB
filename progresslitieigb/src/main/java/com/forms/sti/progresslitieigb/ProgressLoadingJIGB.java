@@ -39,8 +39,6 @@ public class ProgressLoadingJIGB {
 
         ManagerLoadingIGB managerLoadingIGB = new ManagerLoadingIGB();
         managerLoadingIGB.beginJLoading(setting,context);
-
-
     }
 
     public static void finishLoadingJIGB(Context context){
