@@ -205,11 +205,8 @@ public class Main2Activity extends AppCompatActivity implements IProgressLoading
 }
 ```
 
-### Download more Animations:
 
-See more animations here: https://www.lottiefiles.com/
-
-#### Gradle:
+# Gradle
 
 dependencies {
 <br>
@@ -224,6 +221,10 @@ dependencies {
 <br>
 :raised_hands: Thanks! 
 
+
+### Download more Animations:
+
+See more animations here: https://www.lottiefiles.com/
 
 <br>
 <h2>Released July 17, 2020</h2>
