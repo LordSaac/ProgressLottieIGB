@@ -21,6 +21,16 @@ Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
 - Click ok.
 - **Copy your JSON lottie in RAW folder**
 
+***Options for personality:***
+
+* Size text message
+* Style Dialog
+* Color text message
+* Add font for text
+
+Add font for your project check documents: 
+https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts
+
 <hr>
 <h1 align="center">KOTLIN CODE </h1>
 
@@ -45,23 +55,26 @@ This method the user will active for cancel any process.
 class MainActivity : AppCompatActivity(), IProgressLoadingActions {
       
       
-      fun click(view: View){
+       fun click(view: View){
 
         ProgressLoadingIGB.startLoadingIGB(this){
-            message = "Good Morning!" //  Center Message
-            srcLottieJson = R.raw.loader // Tour Source JSON Lottie
-            timer = 10000                   // Time of live for progress.
-            hight = 500 // Optional
-            width = 500 // Optional
+            message = "Please Wait" //  Center Message
+            sizeTextMessage = 50.0f // Size text // Optional
+            fontTextMessage = your font project// Set your personal font // Optional
+            srcLottieJson = R.raw.loader // Your Source JSON Lottie
+            fontColorMessage = Color.GREEN
+            timer = 10000               // Time of live for progress.
+            hight = 700 // Optional
+            width = 700 // Optional
             cancelButton = true // Optional added cancel button
             cancelButtonAlpha = 0.6f  // Optional
             cancelButtonHight = 75  // Optional
             cancelButtonWidth = 60 // Optional
-            cancelButtonColor = R.color.colorPrimary  // Optional
-           // cancelButtonBackground = R.drawable.ic_launcher_background //OPTIONAL recomendable use vector xml
-         }
-      }
-        
+            cancelButtonColor = R.color.colorAccent  // Optional
+           // cancelButtonBackground = R.drawable.ic_launcher_background //OPTIONAL recommendable use vector xml
+
+        }
+    }
       override fun CancelButton() {
         val builder =
             AlertDialog.Builder(this)
@@ -123,15 +136,17 @@ public class Main2Activity extends AppCompatActivity implements IProgressLoading
       
       public void clickOption(View v){
 
-          ProgressLoadingJIGB.setupLoading = (setup) ->  {
-            setup.srcLottieJson = R.raw.sun; // Tour Source JSON Lottie
+           ProgressLoadingJIGB.setupLoading = (setup) ->  {
+            setup.srcLottieJson = R.raw.travel; // Your Source JSON Lottie
             setup.message = "Welcome Summer!";//  Center Message
+            setup.sizeTextMessage = 16.0f;// Size text // Optional
+            setup.styleDialog = Your Style; // Optional
             setup.timer = 0;   // Time of live for progress.
-            setup.width = 200; // Optional
-            setup.hight = 200; // Optional
+            setup.width = 500; // Optional
+            setup.hight = 500; // Optional
             setup.cancelButton = true; // Optional
             setup.cancelButtonAlpha = 1f; // Optional
-            setup.cancelButtonHight = 50; // Optional
+            setup.cancelButtonHight = 75; // Optional
             setup.cancelButtonWidth = 45; // Optional
            // setup.cancelButtonBackground = R.drawable.ic_launcher_background; //OPTIONAL recomendable use vector xml
 
@@ -189,7 +204,7 @@ Here: https://www.lottiefiles.com/
 
 dependencies {
 <br>
-` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:1.0.1'`
+` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:1.0.2'`
  <br>
 }
 <br>
@@ -202,7 +217,7 @@ dependencies {
 
 
 <br>
-<h2>Released January 13, 2020</h2>
+<h2>Released July 17, 2020</h2>
 
 ## Licence
 
