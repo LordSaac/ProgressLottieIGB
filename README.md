@@ -21,7 +21,7 @@ Manager of progress using Lottie JSON,  compatible for Java and Kotlin.
 - Click ok.
 - **Copy your JSON lottie in RAW folder**
 
-***Options for personality:***
+***New options for personality:***
 
 * Size text message
 * Style Dialog
@@ -45,6 +45,31 @@ https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts
             
         }
 
+```
+
+
+
+#### StartLoading Whith Simple Method:  
+
+```
+starLoadingSimpleIGB(R.raw.pork_dance)
+
+```
+
+#### Remove progress:  
+
+```
+finishLoadingIGB()
+```
+
+#### Example:  
+
+```
+      starLoadingSimpleIGB(R.raw.pork_dance)
+
+        Handler().postDelayed({
+            finishLoadingIGB()
+        }, 1500)
 ```
 
 ## Use cancel button:  
@@ -89,28 +114,6 @@ class MainActivity : AppCompatActivity(), IProgressLoadingActions {
 }
 ```
 
-#### Simple Method:  
-
-```
-starLoadingSimpleIGB(R.raw.pork_dance)
-
-```
-
-#### Remove progress:  
-
-```
-finishLoadingIGB()
-```
-
-#### Example:  
-
-```
-      starLoadingSimpleIGB(R.raw.pork_dance)
-
-        Handler().postDelayed({
-            finishLoadingIGB()
-        }, 1500)
-```
 <hr>
 <h1 align="center">JAVA CODE </h1>
 
@@ -124,6 +127,36 @@ It is recommended to use Java 8 onwards.
             setup.width = 200; // Optional
             setup.hight = 200; // Optional
         };
+```
+
+#### StartLoading Whith Simple Method:  
+
+```
+ProgressLoadingJIGB.startLoading(this);
+
+```
+
+#### Remove progress:  
+```
+  ProgressLoadingJIGB.finishLoadingJIGB(context);
+```
+#### Example:  
+```
+           ProgressLoadingJIGB.setupLoading = (setup) ->  {
+            setup.srcLottieJson = R.raw.sun; // Tour Source JSON Lottie
+            setup.message = "Welcome Summer!";//  Center Message
+            setup.timer = 0;   // Time of live for progress.
+            setup.width = 200; // Optional
+            setup.hight = 200; // Optional
+        };
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                ProgressLoadingJIGB.finishLoadingJIGB(context);
+            }
+        }, 6000);
 ```
 
 ## Use cancel button:  
@@ -172,35 +205,11 @@ public class Main2Activity extends AppCompatActivity implements IProgressLoading
 }
 ```
 
-#### Remove progress:  
-```
-  ProgressLoadingJIGB.finishLoadingJIGB(context);
-```
+### Download more Animations:
 
-#### Example:  
-```
-           ProgressLoadingJIGB.setupLoading = (setup) ->  {
-            setup.srcLottieJson = R.raw.sun; // Tour Source JSON Lottie
-            setup.message = "Welcome Summer!";//  Center Message
-            setup.timer = 0;   // Time of live for progress.
-            setup.width = 200; // Optional
-            setup.hight = 200; // Optional
-        };
+See more animations here: https://www.lottiefiles.com/
 
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                ProgressLoadingJIGB.finishLoadingJIGB(context);
-            }
-        }, 6000);
-```
-
-### For More Animations:
-
-Here: https://www.lottiefiles.com/
-
-### Dependency:
+#### Gradle:
 
 dependencies {
 <br>
@@ -209,9 +218,9 @@ dependencies {
 }
 <br>
 <br>
-:coffee: Oh, amazing, I buy you a coffee [Here](https://paypal.me/LordSaac?locale.x=es_XC)
+:coffee: Oh, amazing, I buy you a [coffee](https://paypal.me/LordSaac?locale.x=es_XC)
 <br>
-:star: Or you could give a star [Here](https://github.com/LordSaac/ProgressLottieIGB)
+:star: Do you like library, give it a [star](https://github.com/LordSaac/ProgressLottieIGB)
 <br>
 :raised_hands: Thanks! 
 
