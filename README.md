@@ -221,7 +221,7 @@ dependencies {
 <br>
 :raised_hands: Thanks! 
 
-# Android version:
+# iOS version:
 
 :eight_spoked_asterisk: Do you need iOS Version for you project ?, check out here: https://github.com/LordSaac/IGProgressLottie-Swift
 
