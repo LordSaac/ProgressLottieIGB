@@ -35,7 +35,7 @@ https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts
 <h1 align="center">KOTLIN CODE </h1>
 
 #### Code:  
-```
+```Kotlin
     ProgressLoadingIGB.startLoadingIGB(this){
             message = "Good Morning!" //  Center Message
             srcLottieJson = R.raw.loading_a // Tour Source JSON Lottie
@@ -51,20 +51,20 @@ https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts
 
 #### StartLoading Whith Simple Method:  
 
-```
+```Kotlin
 starLoadingSimpleIGB(R.raw.pork_dance)
 
 ```
 
 #### Remove progress:  
 
-```
+```Kotlin
 finishLoadingIGB()
 ```
 
 #### Example:  
 
-```
+```Kotlin
       starLoadingSimpleIGB(R.raw.pork_dance)
 
         Handler().postDelayed({
@@ -74,9 +74,9 @@ finishLoadingIGB()
 
 ## Use cancel button:  
 This method the user will active for cancel any process.
-#### Add this implement in your class: ```IProgressLoadingActions```
+#### Add this implement in your class: ```Kotlin IProgressLoadingActions```
 #### Example:  
-```
+```Kotlin
 class MainActivity : AppCompatActivity(), IProgressLoadingActions {
       
       
@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity(), IProgressLoadingActions {
 
 It is recommended to use Java 8 onwards.
 ####  Code:
-```
+```Java
         ProgressLoadingJIGB.setupLoading = (setup) ->  {
             setup.srcLottieJson = R.raw.sun; // Tour Source JSON Lottie
             setup.message = "Welcome Summer!";//  Center Message
@@ -131,17 +131,17 @@ It is recommended to use Java 8 onwards.
 
 #### StartLoading Whith Simple Method:  
 
-```
+```Java
 ProgressLoadingJIGB.startLoading(this);
 
 ```
 
 #### Remove progress:  
-```
+```Java
   ProgressLoadingJIGB.finishLoadingJIGB(context);
 ```
 #### Example:  
-```
+```Java
            ProgressLoadingJIGB.setupLoading = (setup) ->  {
             setup.srcLottieJson = R.raw.sun; // Tour Source JSON Lottie
             setup.message = "Welcome Summer!";//  Center Message
@@ -163,7 +163,7 @@ ProgressLoadingJIGB.startLoading(this);
 This method the user will active for cancel any process.
 #### Add this implement in your class: ```IProgressLoadingActions```
 #### Example:  
-```
+```Java
 public class Main2Activity extends AppCompatActivity implements IProgressLoadingActions {
       
       
@@ -221,8 +221,11 @@ dependencies {
 <br>
 :raised_hands: Thanks! 
 
+# Android version:
 
-### Download more Animations:
+:eight_spoked_asterisk: Do you need iOS Version for you project ?, check out here: https://github.com/LordSaac/IGProgressLottie-Swift
+
+# Download more Animations:
 
 See more animations here: https://www.lottiefiles.com/
 
