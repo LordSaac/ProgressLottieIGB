@@ -206,15 +206,34 @@ public class Main2Activity extends AppCompatActivity implements IProgressLoading
 ```
 
 
-# Gradle
+# Gradle Dependency
 
-dependencies {
-<br>
-` implementation 'com.jgb.lordsaac.igb.progresslitieigb:progresslottieigb:1.0.2'`
- <br>
-}
-<br>
-<br>
+
+* Add the JitPack repository to your project's build.gradle file
+
+```
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+* Add the dependency in your app's build.gradle file
+
+```
+    
+    dependencies {
+	        implementation 'com.github.LordSaac:ProgressLottieIGB:v1.0.2'
+	}
+    
+```
+
+# Contribution
+
+
 :coffee: Oh, amazing, I buy you a [coffee](https://paypal.me/LordSaac?locale.x=es_XC)
 <br>
 :star: Do you like library, give it a [star](https://github.com/LordSaac/ProgressLottieIGB)
