@@ -233,16 +233,15 @@ public class Main2Activity extends AppCompatActivity implements IProgressLoading
 
 # Contribution
 
+You are most welcome to contribute to this project!
 
-:coffee: Oh, amazing, I buy you a [coffee](https://paypal.me/LordSaac?locale.x=es_XC)
-<br>
-:star: Do you like library, give it a [star](https://github.com/LordSaac/ProgressLottieIGB)
-<br>
-:raised_hands: Thanks! 
+*  Buy me a  [Coffee](https://paypal.me/LordSaac?locale.x=es_XC)  &nbsp; :coffee:
+
+*  Give me a [Star](https://github.com/LordSaac/ProgressLottieIGB) &nbsp; :star:
 
 # iOS version:
 
-:eight_spoked_asterisk: Do you need iOS Version for you project ?, check out here: https://github.com/LordSaac/IGProgressLottie-Swift
+:eight_spoked_asterisk: &nbsp; Do you need iOS Version for you project ?, check out here: https://github.com/LordSaac/IGProgressLottie-Swift
 
 # Download more Animations:
 
